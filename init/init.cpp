@@ -59,8 +59,8 @@ void set_device_props(const std::string fingerprint, const std::string descripti
         set_ro_build_prop(source, "model", model, true);
     }
 
-    property_override("ro.build.fingerprint", fingerprint.c_str());
-    property_override("ro.build.description", description.c_str());
+/*    property_override("ro.build.fingerprint", fingerprint.c_str());
+    property_override("ro.build.description", description.c_str());*/
 }
 
 void load_device_properties() {
@@ -73,6 +73,14 @@ void load_device_properties() {
                 "excalibur_in-user 10 QKQ1.191215.002 V12.0.1.0.QJXINXM release-keys",
                 "Redmi", "excalibur", "Redmi Note 9 Pro Max");
     }
+    property_override("ro.build.description", "redfin-user 11 RQ2A.210505.003 7255357 release-keys");
+    property_override("ro.product.build.fingerprint", "google/redfin/redfin:11/RQ2A.210505.003/7255357:user/release-keys");
+    property_override("ro.vendor.build.fingerprint", "google/redfin/redfin:11/RQ2A.210505.003/7255357:user/release-keys");
+    property_override("ro.bootimage.build.fingerprint", "google/redfin/redfin:11/RQ2A.210505.003/7255357:user/release-keys");
+    property_override("ro.system.build.fingerprint", "google/redfin/redfin:11/RQ2A.210505.003/7255357:user/release-keys");
+    property_override("ro.system_ext.build.fingerprint", "google/redfin/redfin:11/RQ2A.210505.003/7255357:user/release-keys");
+    property_override("ro.odm.build.fingerprint", "google/redfin/redfin:11/RQ2A.210505.003/7255357:user/release-keys");
+    property_override("ro.build.fingerprint", "google/redfin/redfin:11/RQ2A.210505.003/7255357:user/release-keys");
 }
 
 void vendor_load_properties() {
