@@ -32,6 +32,11 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.device.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.device.rc
 
+# Safetynet
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/safetynet/system/bin/keystore:$(TARGET_COPY_OUT_SYSTEM)/bin/keystore \
+    $(LOCAL_PATH)/safetynet/system/lib64/libkeystore-attestation-application-id.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libkeystore-attestation-application-id.so
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/thermal/thermal-engine-map.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-map.conf \

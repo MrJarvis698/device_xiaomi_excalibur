@@ -78,4 +78,9 @@ void load_device_properties() {
 void vendor_load_properties() {
     load_common_properties();
     load_device_properties();
+    property_override("ro.build.tags", "release-keys");
+    property_override("ro.boot.flash.locked", "1");
+    property_override("ro.boot.verifiedbootstate", "green");
+    property_override("ro.boot.veritymode", "enforcing");
+    property_override("ro.boot.vbmeta.device_state", "locked");
 }
